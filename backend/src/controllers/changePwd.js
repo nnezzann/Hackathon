@@ -12,22 +12,6 @@ import {
 
 const debug = createDebug("app:password");
 
-const createMailerTransport = () => {
-  if (!env.smtpUser || !env.smtpPass) {
-    return null;
-  }
-
-  return nodemailer.createTransport({
-    host: "smtp.gmail.com",
-    port: 587,
-    secure: false,
-    auth: {
-      user: env.smtpUser,
-      pass: env.smtpPass,
-    },
-  });
-};
-
 export const changePassword = async (req, res) => {
   try {
     const { email } = req.body || {};

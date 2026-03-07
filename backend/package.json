@@ -4,8 +4,8 @@
   "description": "",
   "main": "src/server.js",
   "scripts": {
-    "dev": "cross-env DEBUG=app:* nodemon src/server.js",
-    "start": "cross-env DEBUG=app:* node src/server.js",
+    "dev": "node api.js && cross-env DEBUG=app:* nodemon src/server.js",
+    "start": "node api.js && cross-env DEBUG=app:* node src/server.js",
     "test": "node --test test/*.test.js",
     "check": "node --check src/server.js",
     "generate:secrets": "node scripts/generate-secrets.mjs"

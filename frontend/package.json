@@ -4,8 +4,8 @@
   "version": "0.0.1",
   "type": "module",
   "scripts": {
-    "build": "vite build --debug || exit 1",
-    "dev": "vite",
+    "build": "node init && vite build --debug || exit 1",
+    "dev": "node init && vite",
     "test": "npm run build",
     "test:e2e": "node scripts/e2e-smoke.mjs"
   },

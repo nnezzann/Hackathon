@@ -5,11 +5,10 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "concurrently \"npm --prefix backend run start\" \"npm --prefix frontend run dev -- --host 127.0.0.1\"",
-    "start:backend": "npm --prefix backend run start",
-    "start:frontend": "npm --prefix frontend run dev -- --host 127.0.0.1",
+    "start": "node init && concurrently \"npm --prefix backend run start\" \"npm --prefix frontend run dev -- --host 127.0.0.1\"",
+    "start:backend": "node init && npm --prefix backend run start",
+    "start:frontend": "node init && npm --prefix frontend run dev -- --host 127.0.0.1",
     "install-all": "npm install && npm --prefix frontend install && npm --prefix backend install"
-
   },
   "repository": {
     "type": "git",
